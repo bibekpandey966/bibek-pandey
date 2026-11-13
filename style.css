@@ -1,0 +1,546 @@
+
+/* =====================================
+   1. GENERAL SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #263238;
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================
+   2. NAVIGATION
+===================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background: #14213d;
+    color: white;
+    min-height: 75px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fca311;
+}
+
+.theme-toggle,
+.menu-toggle {
+    background: #fca311;
+    color: #14213d;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 20px;
+}
+
+
+/* =====================================
+   3. HOME / HERO
+===================================== */
+
+.hero {
+    min-height: 580px;
+    background: linear-gradient(120deg, #14213d, #243b64);
+    color: white;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome-text {
+    color: #fca311;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #fca311;
+}
+
+.hero h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.hero-content > p {
+    margin-bottom: 15px;
+}
+
+.hero-image img {
+    width: 260px;
+    height: 310px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+/* =====================================
+   4. BUTTONS
+===================================== */
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover,
+.welcome-button:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn {
+    background: #fca311;
+    color: #14213d;
+}
+
+.secondary-btn {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.welcome-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #14213d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+#welcome-message {
+    margin-top: 12px;
+    color: #fca311;
+}
+
+.clock-box {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   5. COMMON SECTION DESIGN
+===================================== */
+
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.alternate-bg {
+    background: #eaf0f8;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading p {
+    color: #e99a08;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #14213d;
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: left;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+
+/* =====================================
+   6. EDUCATION AND EXPERIENCE CARDS
+===================================== */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    border-left: 5px solid #fca311;
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    color: #14213d;
+    margin: 12px 0;
+}
+
+.info-card p {
+    margin-bottom: 8px;
+}
+
+.year {
+    color: #b87900;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.research-card {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* =====================================
+   7. RESEARCH INTEREST TAGS
+===================================== */
+
+.interests-heading {
+    margin-top: 65px;
+    margin-bottom: 25px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tag-container span {
+    background: #14213d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   8. SKILLS
+===================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 22px 12px;
+    background: #14213d;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.skill-card:hover {
+    background: #fca311;
+    color: #14213d;
+    transform: scale(1.04);
+}
+
+
+/* =====================================
+   9. CONTACT FORM
+===================================== */
+
+.contact-intro {
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd3df;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #fca311;
+    border-color: transparent;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 20px;
+}
+
+#form-status {
+    margin-top: 15px;
+    color: #14213d;
+    overflow-wrap: anywhere;
+}
+
+.contact-email {
+    margin-top: 25px;
+}
+
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+footer {
+    background: #14213d;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #fca311;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   11. DARK MODE
+===================================== */
+
+body.dark-mode {
+    background: #121826;
+    color: #e5e7eb;
+}
+
+body.dark-mode .section {
+    background: #121826;
+}
+
+body.dark-mode .alternate-bg {
+    background: #1c2739;
+}
+
+body.dark-mode .section-heading h2 {
+    color: #fca311;
+}
+
+body.dark-mode .info-card,
+body.dark-mode .contact-form {
+    background: #253247;
+    color: white;
+}
+
+body.dark-mode .info-card h3 {
+    color: #fca311;
+}
+
+body.dark-mode .skill-card {
+    background: #35445c;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: #182337;
+    color: white;
+    border-color: #64748b;
+}
+
+body.dark-mode #form-status {
+    color: #fca311;
+}
+
+
+/* =====================================
+   12. MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        order: 4;
+        padding: 15px 0;
+    }
+
+    .nav-links.show-menu {
+        display: flex;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 230px;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+}
